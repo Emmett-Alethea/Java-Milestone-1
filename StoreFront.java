@@ -59,6 +59,13 @@ private static Cart cart = new Cart();
 				continue;
 		} // end of purchase
 		}
+		else if (selected.equals("p")) {
+			continue;
+		}
+		else {
+			System.out.println("Please select an item");
+			continue;
+		}
 		System.out.println("Would you like to buy another item, or would you like to return something. Purchase: r, cancel: c");
 		selected = input.next();
 		if (selected.equals("c")) {
@@ -67,7 +74,7 @@ private static Cart cart = new Cart();
 			if (selected.equals("a")) {
 				System.out.println("Would you like to return one of these items? y/n");
 				selected = input.next();
-				if (selected.equals("a")) {
+				if (selected.equals("y")) {
 					cancel(list.getItem(0));
 					System.out.println("Item a has been removed from cart");
 					updateCart();
